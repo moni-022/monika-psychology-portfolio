@@ -1,0 +1,233 @@
+.main-hero {
+  width: min(1240px, 90%);
+  margin: 0 auto;
+  min-height: calc(100svh - 118px);
+  display: grid;
+  grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
+  gap: clamp(16px, 3vw, 44px);
+  align-items: center;
+  position: relative;
+  padding: clamp(20px, 3vh, 40px) 0 clamp(48px, 6vh, 76px);
+}
+.main-copy {
+  position: relative;
+  z-index: 2;
+  padding: 10px 0 15px 3%;
+}
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  font-weight: 700;
+  color: #697963;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+.eyebrow > span {
+  width: 28px;
+  height: 1px;
+  background: #a7b39d;
+}
+.main-hero h1 {
+  font: 500 clamp(40px, 4.5vw, 68px)/1.1 var(--serif);
+  letter-spacing: -0.045em;
+  margin: clamp(18px, 3vh, 29px) 0 18px;
+  color: #2d4133;
+}
+.main-hero h1 em {
+  font-weight: 500;
+  color: #6c846b;
+}
+.main-intro {
+  max-width: 435px;
+  color: #697265;
+  font-size: clamp(12px, 0.95vw, 14px);
+  line-height: 1.9;
+}
+.main-actions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+.button {
+  border: 0;
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  padding: 13px 18px;
+  font-size: 11px;
+  font-weight: 600;
+  transition:
+    transform 0.2s,
+    background 0.2s;
+}
+.button:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+.button-primary {
+  background: var(--green);
+  color: white;
+}
+.button-primary:hover {
+  background: var(--green-deep);
+}
+.text-link {
+  font-size: 10px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid #aab3a2;
+  padding-bottom: 5px;
+}
+.main-note {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: clamp(20px, 4vh, 38px);
+  color: #7a8075;
+  font-size: 10px;
+  line-height: 1.7;
+}
+.main-note > span {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #d8ddcf;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #72856b;
+}
+.main-note strong {
+  font-weight: 600;
+  color: #4c5f4d;
+}
+.main-art {
+  position: relative;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+}
+.main-scroll {
+  position: absolute;
+  bottom: 17px;
+  left: 3%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 8px;
+  letter-spacing: 0.17em;
+  color: #858a7c;
+}
+.main-scroll > span {
+  width: 35px;
+  height: 1px;
+  background: #a6b09c;
+}
+@media (min-width: 1500px) {
+  .main-hero {
+    width: min(1320px, 88%);
+  }
+  .main-hero h1 {
+    font-size: clamp(68px, 4.5vw, 82px);
+  }
+  .main-intro {
+    font-size: 15px;
+    max-width: 470px;
+  }
+}
+@media (max-width: 900px) {
+  .main-hero {
+    width: 90%;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    min-height: calc(100svh - 110px);
+    gap: 12px;
+  }
+  .main-hero h1 {
+    font-size: clamp(38px, 5vw, 54px);
+  }
+  .main-copy {
+    padding-left: 0;
+  }
+  .main-actions {
+    gap: 13px;
+  }
+  .main-note {
+    margin-top: 24px;
+  }
+}
+@media (max-width: 650px) {
+  .main-hero {
+    width: 89%;
+    grid-template-columns: 1fr;
+    gap: 2px;
+    min-height: auto;
+    padding: 32px 0 44px;
+  }
+  .main-copy {
+    padding: 0;
+  }
+  .eyebrow {
+    font-size: 9px;
+  }
+  .main-hero h1 {
+    font-size: clamp(42px, 10.8vw, 60px);
+    margin-top: 18px;
+    margin-bottom: 14px;
+  }
+  .main-intro {
+    font-size: 12px;
+    line-height: 1.8;
+    max-width: 520px;
+  }
+  .main-actions {
+    gap: 16px;
+    margin-top: 19px;
+  }
+  .button {
+    padding: 12px 14px;
+    font-size: 10px;
+  }
+  .text-link {
+    font-size: 10px;
+  }
+  .main-note {
+    margin-top: 18px;
+    font-size: 9px;
+  }
+  .main-art {
+    margin-top: 0;
+    min-height: 0;
+  }
+  .main-scroll {
+    left: 0;
+    bottom: 13px;
+  }
+}
+@media (max-height: 740px) and (min-width: 651px) {
+  .main-hero {
+    min-height: calc(100svh - 100px);
+    padding-top: 12px;
+    padding-bottom: 48px;
+  }
+  .main-hero h1 {
+    font-size: clamp(38px, 4.2vw, 56px);
+    margin: 16px 0 12px;
+  }
+  .main-intro {
+    line-height: 1.7;
+  }
+  .main-actions {
+    margin-top: 16px;
+  }
+  .main-note {
+    margin-top: 18px;
+  }
+  .hero-brain-portal {
+    min-height: 330px;
+  }
+}

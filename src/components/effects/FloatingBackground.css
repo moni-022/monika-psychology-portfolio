@@ -1,0 +1,96 @@
+.ambient-background {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  color: #b8c7ad;
+}
+.ambient-blob {
+  position: absolute;
+  display: block;
+  width: clamp(180px, 30vw, 420px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  filter: blur(65px);
+  opacity: 0.13;
+  animation: drift-blob 19s ease-in-out infinite alternate;
+}
+.blob-one {
+  background: #a8b99b;
+  top: 7%;
+  left: -14%;
+}
+.blob-two {
+  background: #d7b6a4;
+  top: 38%;
+  right: -15%;
+  animation-delay: -7s;
+}
+.blob-three {
+  background: #c3cbb0;
+  bottom: 2%;
+  left: 30%;
+  animation-delay: -12s;
+}
+.ambient-grain {
+  position: absolute;
+  inset: 0;
+  opacity: 0.12;
+  background-image: radial-gradient(#7f8d74 0.55px, transparent 0.55px);
+  background-size: 8px 8px;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 12%,
+    black 85%,
+    transparent
+  );
+}
+.ambient-vine {
+  position: absolute;
+  width: 120px;
+  opacity: 0.28;
+  animation: vine-sway 9s ease-in-out infinite alternate;
+}
+.vine-left {
+  left: -18px;
+  top: 32%;
+}
+.vine-right {
+  right: -18px;
+  top: 57%;
+  animation-delay: -4s;
+}
+@keyframes drift-blob {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.92);
+  }
+  100% {
+    transform: translate3d(35px, -28px, 0) scale(1.08);
+  }
+}
+@keyframes vine-sway {
+  from {
+    transform: rotate(-4deg);
+  }
+  to {
+    transform: rotate(5deg);
+  }
+}
+@media (max-width: 650px) {
+  .ambient-vine {
+    width: 70px;
+    opacity: 0.17;
+  }
+  .ambient-blob {
+    filter: blur(42px);
+    opacity: 0.11;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ambient-blob,
+  .ambient-vine {
+    animation: none;
+  }
+}

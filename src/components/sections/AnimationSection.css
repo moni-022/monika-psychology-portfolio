@@ -1,0 +1,11 @@
+.animation-section {
+  position: relative;
+  isolation: isolate;
+}
+.animation-section:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 72% 48%, #e5eadb 0, transparent 45%);
+  pointer-events: none;
+}

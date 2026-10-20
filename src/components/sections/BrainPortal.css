@@ -1,0 +1,318 @@
+.hero-brain-portal {
+  position: relative;
+  width: min(100%, 540px);
+  aspect-ratio: 1.08;
+  min-height: 400px;
+  max-height: calc(100svh - 150px);
+  margin: auto;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+  color: #3f5541;
+}
+.hero-brain-orbit {
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  transform: translate(-50%, -50%);
+  aspect-ratio: 1;
+  border: 1px solid #dfe3d7;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+}
+.hero-brain-orbit-a {
+  width: 77%;
+  opacity: 0.9;
+}
+.hero-brain-orbit-b {
+  width: 94%;
+  border-style: dashed;
+  opacity: 0.55;
+}
+.hero-brain-canvas {
+  position: absolute;
+  inset: 3% 2% 13%;
+  z-index: 0;
+  cursor: grab;
+  touch-action: pan-y;
+  overflow: visible;
+}
+.hero-brain-canvas:active {
+  cursor: grabbing;
+}
+.hero-brain-canvas canvas {
+  outline: none !important;
+  overflow: visible;
+}
+.brain-3d-hotspot {
+  --hotspot: #cf7f88;
+  width: 19px;
+  height: 19px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  pointer-events: auto;
+  outline: none;
+}
+.brain-3d-hotspot-core {
+  width: 10px;
+  height: 10px;
+  display: block;
+  border-radius: 50%;
+  background: var(--hotspot);
+  border: 2px solid #fffdf8;
+  box-shadow:
+    0 0 0 4px color-mix(in srgb, var(--hotspot) 25%, transparent),
+    0 2px 10px #a75e6430;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.brain-3d-hotspot:hover .brain-3d-hotspot-core,
+.brain-3d-hotspot:focus-visible .brain-3d-hotspot-core,
+.brain-3d-hotspot.is-active .brain-3d-hotspot-core {
+  transform: scale(1.22);
+  box-shadow:
+    0 0 0 6px color-mix(in srgb, var(--hotspot) 25%, transparent),
+    0 3px 13px #a75e6435;
+}
+.brain-3d-tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 12px);
+  width: 188px;
+  max-width: 70vw;
+  padding: 11px 12px;
+  background: #fffdf8f5;
+  border: 1px solid #e7e4da;
+  border-radius: 7px;
+  box-shadow: 0 12px 32px #344a3718;
+  text-align: left;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, 4px);
+  transition:
+    opacity 0.18s,
+    transform 0.18s,
+    visibility 0.18s;
+  pointer-events: none;
+  backdrop-filter: blur(10px);
+}
+.brain-3d-hotspot:nth-child(3n) .brain-3d-tooltip {
+  bottom: auto;
+  top: calc(100% + 12px);
+}
+.brain-3d-hotspot:hover .brain-3d-tooltip,
+.brain-3d-hotspot:focus-visible .brain-3d-tooltip,
+.brain-3d-hotspot.is-pinned .brain-3d-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+.brain-3d-tooltip strong,
+.brain-3d-tooltip small,
+.brain-3d-tooltip > span {
+  display: block;
+}
+.brain-3d-tooltip strong {
+  font: 500 16px/1.2 var(--serif);
+  color: #354b39;
+}
+.brain-3d-tooltip small {
+  margin-top: 4px;
+  color: #8a927f;
+  font-size: 9px;
+  letter-spacing: 0.03em;
+}
+.brain-3d-tooltip > span {
+  margin-top: 7px;
+  font-size: 10px;
+  line-height: 1.5;
+  color: #6e776a;
+}
+.hero-brain-caption {
+  position: absolute;
+  left: 2%;
+  bottom: 20%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 12px;
+  background: #fffdf8e8;
+  border: 1px solid #edeee6;
+  border-radius: 5px;
+  box-shadow: 0 10px 28px #4a5c3d09;
+  pointer-events: none;
+}
+.caption-spark {
+  font-size: 20px;
+  color: #c18b74;
+}
+.hero-brain-caption strong,
+.hero-brain-caption small {
+  display: block;
+}
+.hero-brain-caption strong {
+  font: 500 12px var(--serif);
+  color: #405640;
+}
+.hero-brain-caption small {
+  font-size: 8px;
+  color: #89907f;
+  margin-top: 4px;
+}
+.hero-brain-controls {
+  position: absolute;
+  left: 50%;
+  bottom: 4%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 13px;
+  white-space: nowrap;
+}
+.hero-brain-rotate {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 13px;
+  border: 1px solid #dfe3d7;
+  border-radius: 99px;
+  background: #faf9f2f2;
+  color: #647860;
+  font-size: 10px;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px #40564008;
+}
+.hero-brain-rotate:hover {
+  background: #fff;
+}
+.hero-brain-hint {
+  font-size: 8px;
+  letter-spacing: 0.13em;
+  color: #8b927f;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.hero-brain-hint i {
+  font-style: normal;
+  color: #b77d68;
+  padding: 0 5px;
+}
+.hero-brain-footnote {
+  position: absolute;
+  left: 50%;
+  bottom: -1%;
+  transform: translateX(-50%);
+  font-size: 7px;
+  line-height: 1.5;
+  color: #a0a294;
+  text-align: center;
+  white-space: nowrap;
+}
+.hero-brain-mobile-detail {
+  display: none;
+}
+@media (max-width: 900px) {
+  .hero-brain-portal {
+    width: min(100%, 490px);
+    min-height: 360px;
+    max-height: none;
+  }
+  .hero-brain-caption {
+    left: 0;
+    bottom: 19%;
+    padding: 8px 9px;
+  }
+  .hero-brain-caption strong {
+    font-size: 11px;
+  }
+  .hero-brain-caption small {
+    font-size: 7px;
+  }
+  .hero-brain-controls {
+    bottom: 3%;
+    gap: 10px;
+  }
+  .hero-brain-footnote {
+    white-space: normal;
+    width: 90%;
+    bottom: -2%;
+  }
+}
+@media (max-width: 650px) {
+  .hero-brain-portal {
+    width: 100%;
+    min-height: 0;
+    max-height: none;
+    aspect-ratio: 1/0.98;
+    margin: 0 auto;
+  }
+  .hero-brain-canvas {
+    inset: 2% 0 16%;
+  }
+  .brain-3d-hotspot {
+    width: 25px;
+    height: 25px;
+  }
+  .brain-3d-tooltip {
+    width: 178px;
+    padding: 10px;
+  }
+  .hero-brain-caption {
+    left: 0;
+    bottom: 19%;
+    padding: 7px 8px;
+  }
+  .hero-brain-caption strong {
+    font-size: 10px;
+  }
+  .hero-brain-caption small {
+    font-size: 7px;
+  }
+  .hero-brain-controls {
+    bottom: 1%;
+    gap: 9px;
+  }
+  .hero-brain-rotate {
+    font-size: 9px;
+    padding: 7px 11px;
+  }
+  .hero-brain-hint {
+    font-size: 7px;
+    letter-spacing: 0.09em;
+  }
+  .hero-brain-footnote {
+    display: none;
+  }
+  .hero-brain-mobile-detail {
+    display: none;
+  }
+  .brain-3d-hotspot:hover .brain-3d-tooltip {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, 4px);
+  }
+  .brain-3d-hotspot.is-pinned .brain-3d-tooltip,
+  .brain-3d-hotspot:focus-visible .brain-3d-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brain-3d-hotspot-core,
+  .brain-3d-tooltip {
+    transition: none;
+  }
+}

@@ -1,0 +1,140 @@
+.about-section {
+  position: relative;
+}
+.section-wrap {
+  width: min(1120px, 87%);
+  margin-inline: auto;
+}
+.section-space {
+  padding-top: 108px;
+  padding-bottom: 108px;
+}
+.section-kicker {
+  font-size: 20px;
+  letter-spacing: 0.19em;
+  font-weight: 700;
+  color: #697963;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+.section-kicker span {
+  color: #b47a60;
+  font-size: 15px;
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.78fr 1.22fr;
+  gap: clamp(50px, 9vw, 125px);
+  align-items: center;
+  margin-top: 38px;
+}
+.portrait-wrap {
+  position: relative;
+  width: min(100%, 355px);
+  margin-inline: auto;
+}
+.portrait-frame {
+  background: #e3e7d8;
+  padding: 13px;
+  border-radius: 48% 48% 4px 4px;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+}
+.portrait-wrap:hover .portrait-frame {
+  transform: rotate(-1.5deg) translateY(-5px);
+}
+.portrait-frame img {
+  width: 100%;
+  display: block;
+  border-radius: 48% 48% 2px 2px;
+}
+.portrait-caption {
+  display: block;
+  font: italic 11px var(--serif);
+  color: #8b8d7d;
+  text-align: center;
+  margin-top: 14px;
+}
+.portrait-doodle {
+  position: absolute;
+  right: -40px;
+  top: 46px;
+  font: italic 14px/1.3 var(--serif);
+  color: #9b6e58;
+  transform: rotate(-8deg);
+}
+.about-copy h2 {
+  font: 500 clamp(34px, 4vw, 49px)/1.2 var(--serif);
+  letter-spacing: -0.04em;
+  margin: 19px 0 22px;
+  color: #2d4133;
+}
+.about-copy h2 em {
+  color: #6c846b;
+  font-weight: 500;
+}
+.about-copy p {
+  font-size: 13px;
+  line-height: 1.95;
+  color: #70776b;
+  max-width: 520px;
+}
+.about-copy .lead {
+  font: 500 17px/1.8 var(--serif);
+  color: #4b5f4c;
+}
+.signature {
+  margin-top: 25px;
+  font-size: 11px;
+  color: #6f776b;
+}
+.signature span {
+  font: italic 25px var(--serif);
+  color: #647c62;
+  margin-left: 7px;
+}
+.underlined-link {
+  margin-top: 22px;
+  color: #4b634e;
+  font-size: 11px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid #aab3a2;
+  padding-bottom: 5px;
+}
+@media (max-width: 650px) {
+  .section-wrap {
+    width: 89%;
+  }
+  .section-space {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    margin-top: 28px;
+  }
+  .portrait-wrap {
+    width: min(78%, 290px);
+    margin-left: 4%;
+    margin-right: auto;
+  }
+  .portrait-doodle {
+    right: -63px;
+    top: 44px;
+    font-size: 13px;
+  }
+  .about-copy h2 {
+    font-size: clamp(34px, 9vw, 45px);
+  }
+  .about-copy p {
+    font-size: 12px;
+  }
+  .about-copy .lead {
+    font-size: 16px;
+  }
+}
