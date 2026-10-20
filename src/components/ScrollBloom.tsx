@@ -150,7 +150,7 @@ export default function ScrollBloom() {
       <div className="scroll-bloom-inner">
         <div className="bloom-copy">
           <div className="section-kicker">
-            A METAPHOR FOR GROWTH <span>✳</span>
+            A METAPHOR FOR GROWTH <span>✹</span>
           </div>
           <h2 id="bloom-title">
             Understanding the mind

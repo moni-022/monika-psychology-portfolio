@@ -17,3 +17,31 @@
 @keyframes contact-modal-in{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
 @media(max-width:480px){.contact-success-modal{padding:38px 24px 28px}}
 @media(prefers-reduced-motion:reduce){.contact-spinner,.contact-modal-backdrop,.contact-success-modal{animation:none}}
+
+/* Dark theme overrides for the full contact section (not only its inputs). */
+:root[data-theme="dark"] .contact-section {
+  background: #222e24;
+  color: #e7e9df;
+}
+:root[data-theme="dark"] .contact-inner h2 { color: #e2e8da; }
+:root[data-theme="dark"] .contact-inner h2 em { color: #a7c09d; }
+:root[data-theme="dark"] .contact-intro { color: #b7c0b2; }
+:root[data-theme="dark"] .contact-form label { color: #c5d5bb; }
+:root[data-theme="dark"] .contact-form input,
+:root[data-theme="dark"] .contact-form textarea {
+  background: #1b241d;
+  color: #e7e9df;
+  border-color: #465747;
+}
+:root[data-theme="dark"] .contact-form input::placeholder,
+:root[data-theme="dark"] .contact-form textarea::placeholder { color: #9da997; }
+:root[data-theme="dark"] .form-note { color: #aeb8a7; }
+:root[data-theme="dark"] .form-feedback { color: #b9d1af; }
+:root[data-theme="dark"] .contact-decoration { color: #435640; }
+:root[data-theme="dark"] .contact-success-modal { background: #263228; border-color: #465747; }
+:root[data-theme="dark"] .contact-modal-close { color: #d4dfcc; }
+:root[data-theme="dark"] .contact-success-icon { background: #354635; color: #c4d5bb; }
+:root[data-theme="dark"] .contact-success-modal .section-kicker { color: #a7c09d; }
+:root[data-theme="dark"] .contact-success-modal h3 { color: #e2e8da; }
+:root[data-theme="dark"] .contact-success-modal > p:not(.section-kicker) { color: #b7c0b2; }
+

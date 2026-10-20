@@ -1,217 +1,42 @@
 /* Scroll-driven brain-to-flower illustration */
-.scroll-bloom {
-  min-height: 100svh;
-  background: #f3f1e8;
-  position: relative;
-  overflow: clip;
-  display: flex;
-  align-items: center;
-  padding: 70px 0;
-  border-block: 1px solid #e7e7dc;
-}
-.scroll-bloom-inner {
-  width: min(1120px, 87%);
-  margin-inline: auto;
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: clamp(30px, 6vw, 90px);
-  align-items: center;
-}
-.bloom-copy {
-  position: relative;
-  z-index: 2;
-}
-.bloom-copy h2 {
-  font: 500 clamp(37px, 4.5vw, 57px)/1.17 var(--serif);
-  letter-spacing: -0.045em;
-  color: #2d4133;
-  margin: 23px 0 19px;
-}
-.bloom-copy h2 em {
-  color: #6c846b;
-  font-weight: 500;
-}
-.bloom-copy > p {
-  max-width: 390px;
-  font-size: 13px;
-  line-height: 1.95;
-  color: #70776b;
-}
-.bloom-scroll-hint {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  margin-top: 27px;
-  font-size: 10px;
-  letter-spacing: 0.05em;
-  color: #75846d;
-}
-.bloom-scroll-hint svg {
-  animation: bloom-nudge 1.8s ease-in-out infinite;
-  flex-shrink: 0;
-}
-.bloom-caption {
-  display: flex;
-  align-items: center;
-  gap: 11px;
-  margin-top: 33px;
-  color: #60785d;
-  opacity: 0;
-  visibility: hidden;
-}
-.bloom-caption > svg {
-  flex-shrink: 0;
-}
-.bloom-caption strong,
-.bloom-caption small {
-  display: block;
-}
-.bloom-caption strong {
-  font: 500 15px var(--serif);
-}
-.bloom-caption small {
-  font-size: 10px;
-  color: #858b7d;
-  margin-top: 5px;
-}
-.bloom-art {
-  min-height: 470px;
-  position: relative;
-  display: grid;
-  place-items: center;
-  isolation: isolate;
-}
-.bloom-orbit {
-  position: absolute;
-  width: min(85%, 410px);
-  aspect-ratio: 1;
-  border: 1px solid #d9dfd0;
-  border-radius: 50%;
-  z-index: -1;
-  will-change: transform;
-}
-.orbit-a {
-  border-style: dashed;
-  opacity: 0.7;
-}
-.orbit-b {
-  width: min(70%, 335px);
-  border-color: #e3e4d8;
-}
-.bloom-svg {
-  width: min(100%, 440px);
-  height: auto;
-  overflow: visible;
-  filter: drop-shadow(0 15px 18px #4b5e3d0b);
-}
+.scroll-bloom{min-height:100svh;background:#f3f1e8;position:relative;overflow:clip;display:flex;align-items:center;padding:70px 0;border-block:1px solid #e7e7dc}
+.scroll-bloom-inner{width:min(1120px,87%);margin-inline:auto;display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,6vw,90px);align-items:center}
+.bloom-copy{position:relative;z-index:2}
+.bloom-copy h2{font:500 clamp(37px,4.5vw,57px)/1.17 var(--serif);letter-spacing:-.045em;color:#2d4133;margin:23px 0 19px}
+.bloom-copy h2 em{color:#6c846b;font-weight:500}
+.bloom-copy>p{max-width:390px;font-size:13px;line-height:1.95;color:#70776b}
+.bloom-scroll-hint{display:flex;align-items:center;gap:9px;margin-top:27px;font-size:10px;letter-spacing:.05em;color:#75846d}
+.bloom-scroll-hint svg{animation:bloom-nudge 1.8s ease-in-out infinite;flex-shrink:0}
+.bloom-caption{display:flex;align-items:center;gap:11px;margin-top:33px;color:#60785d;opacity:0;visibility:hidden}
+.bloom-caption>svg{flex-shrink:0}.bloom-caption strong,.bloom-caption small{display:block}.bloom-caption strong{font:500 15px var(--serif)}.bloom-caption small{font-size:10px;color:#858b7d;margin-top:5px}
+.bloom-art{min-height:470px;position:relative;display:grid;place-items:center;isolation:isolate}
+.bloom-orbit{position:absolute;width:min(85%,410px);aspect-ratio:1;border:1px solid #d9dfd0;border-radius:50%;z-index:-1;will-change:transform}
+.orbit-a{border-style:dashed;opacity:.7}.orbit-b{width:min(70%,335px);border-color:#e3e4d8}
+.bloom-svg{width:min(100%,440px);height:auto;overflow:visible;filter:drop-shadow(0 15px 18px #4b5e3d0b)}
 /* SVG groups are animated, not their child paths. Their local (0,0) is the flower centre. */
-.bloom-petal {
-  transform-box: view-box;
-  transform-origin: 0px 0px;
+.bloom-petal{transform-box:view-box;transform-origin:0px 0px}
+.bloom-seed{transform-box:view-box;transform-origin:180px 122px}
+.bloom-leaf-group{transform-box:fill-box;transform-origin:center center}
+.bloom-ground{opacity:.9}
+.bloom-side-note{position:absolute;font-size:8px;letter-spacing:.2em;color:#89917e;writing-mode:vertical-rl;pointer-events:none}
+.note-left{left:2%;top:31%;transform:rotate(180deg)}.note-right{right:0;bottom:27%}
+@keyframes bloom-nudge{0%,100%{transform:translateY(-2px)}50%{transform:translateY(4px)}}
+@media(max-width:900px){.scroll-bloom-inner{width:90%;gap:25px}.bloom-art{min-height:390px}.bloom-copy h2{font-size:clamp(34px,5vw,46px)}.bloom-side-note{font-size:7px}}
+@media(max-width:640px){.scroll-bloom{min-height:100svh;padding:58px 0 45px;overflow:hidden}.scroll-bloom-inner{width:89%;grid-template-columns:1fr;gap:6px}.bloom-copy h2{font-size:clamp(35px,9vw,47px);margin:17px 0 13px}.bloom-copy>p{font-size:12px;line-height:1.8;max-width:480px}.bloom-scroll-hint{margin-top:17px}.bloom-art{min-height:320px;margin-top:0}.bloom-svg{width:min(100%,340px)}.bloom-orbit{width:min(83%,320px)}.orbit-b{width:min(67%,255px)}.bloom-caption{margin-top:10px}.bloom-side-note{font-size:6px}.note-left{left:0}.note-right{right:0}}
+@media(prefers-reduced-motion:reduce){.bloom-scroll-hint svg{animation:none!important}}
+
+/* Dark theme overrides for the mind-to-flower growth section. */
+:root[data-theme="dark"] .scroll-bloom {
+  background: #1b241d;
+  border-color: #344235;
 }
-.bloom-seed {
-  transform-box: view-box;
-  transform-origin: 180px 122px;
-}
-.bloom-leaf-group {
-  transform-box: fill-box;
-  transform-origin: center center;
-}
-.bloom-ground {
-  opacity: 0.9;
-}
-.bloom-side-note {
-  position: absolute;
-  font-size: 8px;
-  letter-spacing: 0.2em;
-  color: #89917e;
-  writing-mode: vertical-rl;
-  pointer-events: none;
-}
-.note-left {
-  left: 2%;
-  top: 31%;
-  transform: rotate(180deg);
-}
-.note-right {
-  right: 0;
-  bottom: 27%;
-}
-@keyframes bloom-nudge {
-  0%,
-  100% {
-    transform: translateY(-2px);
-  }
-  50% {
-    transform: translateY(4px);
-  }
-}
-@media (max-width: 900px) {
-  .scroll-bloom-inner {
-    width: 90%;
-    gap: 25px;
-  }
-  .bloom-art {
-    min-height: 390px;
-  }
-  .bloom-copy h2 {
-    font-size: clamp(34px, 5vw, 46px);
-  }
-  .bloom-side-note {
-    font-size: 7px;
-  }
-}
-@media (max-width: 640px) {
-  .scroll-bloom {
-    min-height: 100svh;
-    padding: 58px 0 45px;
-    overflow: hidden;
-  }
-  .scroll-bloom-inner {
-    width: 89%;
-    grid-template-columns: 1fr;
-    gap: 6px;
-  }
-  .bloom-copy h2 {
-    font-size: clamp(35px, 9vw, 47px);
-    margin: 17px 0 13px;
-  }
-  .bloom-copy > p {
-    font-size: 12px;
-    line-height: 1.8;
-    max-width: 480px;
-  }
-  .bloom-scroll-hint {
-    margin-top: 17px;
-  }
-  .bloom-art {
-    min-height: 320px;
-    margin-top: 0;
-  }
-  .bloom-svg {
-    width: min(100%, 340px);
-  }
-  .bloom-orbit {
-    width: min(83%, 320px);
-  }
-  .orbit-b {
-    width: min(67%, 255px);
-  }
-  .bloom-caption {
-    margin-top: 10px;
-  }
-  .bloom-side-note {
-    font-size: 6px;
-  }
-  .note-left {
-    left: 0;
-  }
-  .note-right {
-    right: 0;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .bloom-scroll-hint svg {
-    animation: none !important;
-  }
-}
+:root[data-theme="dark"] .bloom-copy h2 { color: #e2e8da; }
+:root[data-theme="dark"] .bloom-copy h2 em { color: #a7c09d; }
+:root[data-theme="dark"] .bloom-copy > p { color: #b7c0b2; }
+:root[data-theme="dark"] .bloom-scroll-hint,
+:root[data-theme="dark"] .bloom-caption { color: #c0d0b6; }
+:root[data-theme="dark"] .bloom-caption small { color: #aeb8a7; }
+:root[data-theme="dark"] .bloom-orbit { border-color: #465747; }
+:root[data-theme="dark"] .orbit-b { border-color: #3a483b; }
+:root[data-theme="dark"] .bloom-side-note { color: #aab8a4; }
+

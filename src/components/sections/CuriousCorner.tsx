@@ -59,7 +59,7 @@ export default function CuriousCorner() {
         <div className="curious-heading reveal-item">
           <div>
             <div className="section-kicker">
-              THE CURIOUS CORNER <span>✳</span>
+              THE CURIOUS CORNER <span>✹</span>
             </div>
             <h2>
               Little discoveries.
@@ -221,7 +221,7 @@ export default function CuriousCorner() {
                 <br />
                 <em>exhale</em>
               </span>
-              <i className="pause-star star-a">✳</i>
+              <i className="pause-star star-a">✹</i>
               <i className="pause-star star-b">✦</i>
             </div>
             <h3>
@@ -234,9 +234,6 @@ export default function CuriousCorner() {
               can hear, and one sensation in your body. No need to change
               anything—just notice.
             </p>
-            <div className="gentle-reminder">
-              <span>“</span> Awareness begins with paying attention.
-            </div>
             <span className="card-footnote">
               <Heart size={13} /> A reflection prompt, not therapy
             </span>

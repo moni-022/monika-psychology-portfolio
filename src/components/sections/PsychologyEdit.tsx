@@ -217,7 +217,7 @@ export default function PsychologyEdit() {
     >
       <div className="psych-edit-wrap">
         <div className="section-kicker reveal-item">
-          A LITTLE CURIOSITY, WELL SPENT <span>✳</span>
+          A LITTLE CURIOSITY, WELL SPENT <span>✹</span>
         </div>
         <div className="psych-edit-heading reveal-item">
           <div>

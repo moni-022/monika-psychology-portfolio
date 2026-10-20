@@ -216,7 +216,7 @@ export default function BrainPortal() {
         </Canvas>
       </div>
       <div className="hero-brain-caption">
-        <span className="caption-spark">✳</span>
+        <span className="caption-spark">✹</span>
         <span>
           <strong>A mind full of possibilities</strong>
           <small>Hover over a point to explore the brain</small>

@@ -10,7 +10,7 @@ export default function AboutMe() {
       ref={ref}
     >
       <div className="section-kicker reveal-item">
-        A LITTLE ABOUT ME <span>✳</span>
+        A LITTLE ABOUT ME <span>✹</span>
       </div>
       <div className="about-grid">
         <div className="portrait-wrap reveal-item">

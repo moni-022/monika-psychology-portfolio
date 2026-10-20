@@ -42,9 +42,9 @@ export default function LetsConnect() {
 
   return (
     <section className="contact-section section-space" id="contact" ref={ref}>
-      <div className="contact-decoration" aria-hidden="true"><span>✳</span><span>✳</span><span>✳</span></div>
+      <div className="contact-decoration" aria-hidden="true"><span>✹</span><span>✹</span><span>✹</span></div>
       <div className="contact-inner section-wrap">
-        <div className="section-kicker reveal-item">A CONVERSATION CAN START ANYWHERE <span>✳</span></div>
+        <div className="section-kicker reveal-item">A CONVERSATION CAN START ANYWHERE <span>✹</span></div>
         <h2 className="reveal-item">Have a thought<br />you’d like to <em>share?</em></h2>
         <p className="contact-intro reveal-item">Whether it’s about psychology, learning, or simply a question sparked by something here, I’d love to hear from you.</p>
         <form className="contact-form reveal-item" onSubmit={submit}>

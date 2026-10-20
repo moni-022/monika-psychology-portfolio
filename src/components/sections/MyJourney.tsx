@@ -154,7 +154,7 @@ export default function MyJourney() {
 
   return (
     <section className="journey-section section-wrap section-space" id="journey" ref={ref}>
-      <div className="section-kicker reveal-item">MY LEARNING PATH <span>✳</span></div>
+      <div className="section-kicker reveal-item">MY LEARNING PATH <span>✹</span></div>
       <div className="journey-heading reveal-item">
         <h2>A journey shaped<br />by <em>learning and people.</em></h2>
       </div>
